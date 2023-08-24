@@ -16,6 +16,6 @@ namespace Hangfire.FluentNHibernateStorage.Maps
                 .Nullable();
         }
 
-        public override string Tablename => "JobParameter";
+        public override string Tablename => "JobP";
     }
 }

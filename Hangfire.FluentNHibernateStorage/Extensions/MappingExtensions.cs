@@ -31,8 +31,8 @@ namespace Hangfire.FluentNHibernateStorage.Extensions
 
         public static PropertyPart MapStringKeyColumn<T>(this ClassMapBase<T> item) where T : IStringKey
         {
-            return item.Map(i => i.Key).Column("Key".WrapObjectName()).Not.Nullable()
-                .Index($"IX_Hangfire_{item.Tablename}_Key");
+            return item.Map(i => i.Key).Column("Key".WrapObjectName()).Not.Nullable();
+                //.Index($"IX_Hangfire_{item.Tablename}_Key");
         }
 
         public static PropertyPart MapStringValueColumn<T>(this ClassMap<T> item, bool nullable)

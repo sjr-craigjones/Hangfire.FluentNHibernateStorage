@@ -8,7 +8,7 @@ namespace Hangfire.FluentNHibernateStorage.Maps
         public _ListMap()
         {
             //id is mapped in parent class
-            this.MapStringKeyColumn().Length(100);
+            this.MapStringKeyColumn().Index($"IX_Hangfire_{Tablename}_Key").Length(100);
             this.MapStringValueColumn(true).Length(Constants.VarcharMaxLength);
             this.MapExpireAt();
         }

@@ -4,7 +4,7 @@ namespace Hangfire.FluentNHibernateStorage.Maps
 {
     internal class _AggregatedCounterMap : _CounterBaseMap<_AggregatedCounter>
     {
-        public override string Tablename => "AggregatedCounter";
+        public override string Tablename => "AggC";
 
         public override bool KeyIsUnique => true;
     }

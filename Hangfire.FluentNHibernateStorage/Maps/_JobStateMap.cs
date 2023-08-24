@@ -12,9 +12,10 @@ namespace Hangfire.FluentNHibernateStorage.Maps
             Map(i => i.Data).Column(Constants.ColumnNames.Data.WrapObjectName()).Length(Constants.StateDataLength)
                 .Nullable();
             this.MapCreatedAt();
-            References(i => i.Job).Column(Constants.ColumnNames.JobId.WrapObjectName()).Not.Nullable().Cascade.Delete();
+            References(i => i.Job).Column(Constants.ColumnNames.JobId.WrapObjectName()).Not.Nullable().Cascade.Delete()
+                .ForeignKey($"FK_Hangfire_{Tablename}_Job");
         }
 
-        public override string Tablename => "JobState";
+        public override string Tablename => "JobS";
     }
 }

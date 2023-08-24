@@ -12,6 +12,6 @@ namespace Hangfire.FluentNHibernateStorage.Maps
             Map(i => i.ExpireAtAsLong).Column("ExpireAtAsLong".WrapObjectName()).Not.Nullable();
         }
 
-        public override string Tablename => "DistributedLock";
+        public override string Tablename => "DLock";
     }
 }

@@ -7,12 +7,13 @@ namespace Hangfire.FluentNHibernateStorage.Maps
     {
         public _JobQueueMap()
         {
-            References(i => i.Job).Cascade.Delete().Column(Constants.ColumnNames.JobId.WrapObjectName());
+            References(i => i.Job).Cascade.Delete().Column(Constants.ColumnNames.JobId.WrapObjectName())
+                .ForeignKey($"FK_Hangfire_{Tablename}_Job");
             Map(i => i.FetchedAt).Column("FetchedAt".WrapObjectName()).Nullable().CustomType<ForcedUtcDateTimeType>();
             Map(i => i.Queue).Column("Queue".WrapObjectName()).Length(50).Not.Nullable();
             Map(i => i.FetchToken).Column("FetchToken".WrapObjectName()).Length(36).Nullable();
         }
 
-        public override string Tablename => "JobQueue";
+        public override string Tablename => "JobQ";
     }
 }

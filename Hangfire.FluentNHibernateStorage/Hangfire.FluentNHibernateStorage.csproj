@@ -5,6 +5,8 @@
     <Version>1.2.1020</Version>
     <Authors>Xavier Jefferson</Authors>
     <Copyright>(c) 2017-2020 Xavier Jefferson.  All rights reserved.</Copyright>
+    <AssemblyVersion>1.2.1020.1</AssemblyVersion>
+    <FileVersion>1.2.1020.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
